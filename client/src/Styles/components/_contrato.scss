@@ -1,0 +1,80 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.contrato-container{
+
+    padding-top:8rem;
+
+    .extra-services{
+
+        position: relative;
+
+        margin-top:3rem;
+        text-align:  center;
+  
+    margin-left:5%;
+    margin-right: 5%;
+    letter-spacing: .1rem;
+    font-family: 'Roboto', sans-serif;
+      }
+      .extra-services .container{
+background-color: transparent;
+      }
+
+      .extra-services .col div{
+         border: solid 1px rgb(158, 135, 135);
+            border-radius: 10px;
+            background-color: rgb(243, 196, 142);
+
+            
+      }
+
+      .extra-services .col div:hover{
+        background-color: white;
+      }
+
+      .extra-services .col div button:hover{
+        background-color: white;
+        color:black;
+      }
+
+      .extra-services div div{
+     
+           // text-align: left;
+            // border: solid 1px rgb(158, 135, 135);
+            // border-radius: 10px;
+            // background-color: rgb(243, 196, 142);
+      }
+    
+      .extra-services div div p{
+        text-align: left;
+        font-size: 30px;
+    
+       } 
+     
+    .icon{
+         font-size: 5rem;
+         border: solid black 1px;
+         border-radius: 10px;
+        background: rgba(15, 0.5, 0.5, 0.5);
+    
+       }
+       .extra-services h1 {
+        margin-bottom: 1rem;
+       }
+
+       .col div button{
+          width: 80%;
+           border: 1px solid black;
+           border-radius: 5px;
+           color:white;
+        background-color: black;
+
+       }
+
+       .col div button:hover{
+        background-color: transparent;
+        
+       }
+}
+

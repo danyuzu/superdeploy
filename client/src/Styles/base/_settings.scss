@@ -1,0 +1,13 @@
+$main:rgb(42, 239, 42);
+$secondary:rgba(255, 255, 255, 0.488); 
+$white:rgba(255, 255, 255, 0.898);
+$dark: rgb(45, 45, 45);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
