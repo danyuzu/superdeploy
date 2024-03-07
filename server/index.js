@@ -146,6 +146,9 @@ app.post("/api/orders/:orderID/capture", async (req, res) => {
 // app.get("/", (req, res) => {
 //   res.sendFile(path.resolve("./client/checkout.html"));
 // });
+  app.use('/', (req, res) => {
+res.send("server is running")
+  }) 
   
 app.listen(PORT, () => {
   console.log(`Node server listening at http://localhost:${PORT}/`);
