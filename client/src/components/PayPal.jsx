@@ -17,7 +17,7 @@ window.paypal.Buttons({
                    description: "cool looking store",
                    amount: {
                     currency_code: "MXN",
-                    value: 1999.00
+                    value: 1.00
 
                    } 
             }

@@ -15,7 +15,7 @@ const Contrato =()=>{
 
 
 <div className='extra-services'>
-
+<h3>servicio no disponible temporalmente</h3>
  <h1>Contrata nuestros servicios adicionales  (Desde<span>$599MX/mes</span>)</h1>
 
  <div class="container px-2 py-4">

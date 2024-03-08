@@ -59,7 +59,7 @@ const createOrder = async (cart) => {
       {
         amount: {
           currency_code: "USD",
-          value: "100.00",
+          value: "1.00",
         },
       },
     ],
@@ -149,7 +149,7 @@ app.post("/api/orders/:orderID/capture", async (req, res) => {
   app.use('/', (req, res) => {
 res.send("server is running")
   }) 
-  
+
 app.listen(PORT, () => {
   console.log(`Node server listening at http://localhost:${PORT}/`);
 });

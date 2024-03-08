@@ -45,7 +45,7 @@ const Homecards =()=>
 
         {checkout ?  (  <PayPal/>
       ) : (  <button className='contratar' onClick={() => setcheckout(true)}> 
-      CHECKOUT</button>)}
+     CONTRATAR</button>)}
           
               </div>
         </div>
@@ -77,7 +77,10 @@ const Homecards =()=>
     
               </ul>
               </div>
-              <button className="contratar">CONTRATAR</button>
+              {checkout ?  (  <PayPal/>
+      ) : (  <button className='contratar' onClick={() => setcheckout(true)}> 
+      CONTRATAR</button>)}
+          
               </div>
         </div>
         <div className="col">
@@ -107,7 +110,10 @@ const Homecards =()=>
     
               </ul>
               </div>
-              <button className="contratar">CONTRATAR</button>
+              {checkout ?  (  <PayPal/>
+      ) : (  <button className='contratar' onClick={() => setcheckout(true)}> 
+      CONTRATAR</button>)}
+          
               </div>
         </div>
      
