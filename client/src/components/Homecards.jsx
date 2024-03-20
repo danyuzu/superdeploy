@@ -79,7 +79,7 @@ const {price, setprice} = useContext(priceContext);
               </ul>
               </div>
               {checkout ?  (  <PayPal/>
-      ) : (  <button className='contratar' onClick={() => setcheckout(true)}> 
+      ) : (  <button className='contratar' onClick={() => {setcheckout(true), setprice(19999.00)}}> 
       CONTRATAR</button>)}
           
               </div>
@@ -112,7 +112,7 @@ const {price, setprice} = useContext(priceContext);
               </ul>
               </div>
               {checkout ?  (  <PayPal/>
-      ) : (  <button className='contratar' onClick={() => setcheckout(true)}> 
+      ) : (  <button className='contratar' onClick={() =>{setcheckout(true), setprice(24999.00)}}> 
       CONTRATAR</button>)}
           
               </div>
