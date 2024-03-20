@@ -45,7 +45,7 @@ const {price, setprice} = useContext(priceContext);
               </div>
 
         {checkout ?  (  <PayPal/>
-      ) : (  <button className='contratar' onClick={() => {setcheckout(true), setprice(13,999.00)}}> 
+      ) : (  <button className='contratar' onClick={() => {setcheckout(true), setprice(13999.00)}}> 
      CONTRATAR</button>)}
           
               </div>
