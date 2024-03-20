@@ -1,15 +1,16 @@
 
 
-import React,{useState} from 'react';
+import React,{useContext, useState} from 'react';
 import PayPal from './PayPal';
 //import "../node_modules/bootstrap/scss/bootstrap";
+import { priceContext } from '../App';
 
 const Homecards =()=>
 {
 
   const [checkout, setcheckout] = useState(false);
 
-
+const {price, setprice} = useContext(priceContext);
     return(<div className='homecard-container px-3'> 
 
 
@@ -44,7 +45,7 @@ const Homecards =()=>
               </div>
 
         {checkout ?  (  <PayPal/>
-      ) : (  <button className='contratar' onClick={() => setcheckout(true)}> 
+      ) : (  <button className='contratar' onClick={() => {setcheckout(true), setprice(13,999.00)}}> 
      CONTRATAR</button>)}
           
               </div>

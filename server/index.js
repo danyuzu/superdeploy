@@ -1,6 +1,6 @@
 import express from "express";
 
-
+import 'dotenv/config';
 import path from "path";
   
 const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET, PORT = 8888 } = process.env;
@@ -59,7 +59,7 @@ const createOrder = async (cart) => {
       {
         amount: {
           currency_code: "USD",
-          value: "1.00",
+          value: cart.value,
         },
       },
     ],

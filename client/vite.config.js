@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api/orders': 'http://localhost:8888',
+      '/api/orders': 'https://superdeploy-server.vercel.app',
     }}
 
   

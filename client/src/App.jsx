@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React,{ useState, createContext } from 'react'
 
 import viteLogo from '/vite.svg'
 
@@ -11,13 +11,16 @@ import Home from './components/Home'
 import Servicios from './components/Servicios'
 import Contrato from './components/Contrato'
 
+export const priceContext =createContext();
+
 
 function App({routes}) {
+  const [price, setprice] = useState(0);
 
   const [count, setCount] = useState(0)
 
   return (
-    <>  
+    <priceContext.Provider value={{price, setprice}}>  
     <Navbar/>
    
    <Routes>
@@ -29,7 +32,7 @@ function App({routes}) {
 
 </Routes>
     
-    </>
+    </priceContext.Provider>
   )
 }
 

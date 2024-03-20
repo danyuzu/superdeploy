@@ -1,33 +1,57 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
+import { priceContext } from "../App";
 
 const PayPal =() =>
 {
 
+  const {price} =useContext(priceContext);
     const paypal = useRef();
 
     useEffect (() =>{
 
 window.paypal.Buttons({
 
-    createOrder: (data, actions, arr) => {
-        return actions.order.create({
-            intent: "CAPTURE", 
-            purchase_units: [
-                {
-                   description: "cool looking store",
-                   amount: {
-                    currency_code: "MXN",
-                    value: 100.00
+  async createOrder() {
 
-                   } 
-            }
-
-            ]
-        })
-    },
+    try {
+      const response = await fetch("https://superdeploy-server.vercel.app/api/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // use the "body" param to optionally pass additional order information
+        // like product ids and quantities
+        body: JSON.stringify({
+          cart: [
+            {
+              id: "2",
+              quantity:1,
+              value: price
+            },
+          ],
+        }),
+      });
+      
+      const orderData = await response.json();
+      
+      if (orderData.id) {
+        return orderData.id;
+      } else {
+        const errorDetail = orderData?.details?.[0];
+        const errorMessage = errorDetail
+          ? `${errorDetail.issue} ${errorDetail.description} (${orderData.debug_id})`
+          : JSON.stringify(orderData);
+        
+        throw new Error(errorMessage);
+      }
+    } catch (error) {
+      console.error(error);
+      // resultMessage(`Could not initiate PayPal Checkout...<br><br>${error}`);
+    }
+  },
     async onApprove(data, actions) {
         try {
-          const response = await fetch(`/api/orders/${data.orderID}/capture`, {
+          const response = await fetch(`https://superdeploy-server.vercel.app/api/orders/${data.orderID}/capture`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
