@@ -7,6 +7,7 @@ import Footer from './Footer';
 import img from '/src/assets/images/landing.png'
 import { Link } from 'react-router-dom';
 import Wa from '/src/assets/whatsapp-svgrepo-com.svg'
+import '..//Styles/components/servicios.css'
 
 
 const Servicios = () => {

@@ -1,0 +1,35 @@
+.main-container{
+text-align: center;
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+}
+div div{
+
+}
+div div h1{
+    padding-top: 8rem; 
+    padding-left: 1rem;
+margin-bottom:1.5rem;
+}
+
+div div h2{
+padding: 1rem;
+}
+div p{
+    padding: 1rem;
+text-align: left;
+letter-spacing: 1px;
+}
+
+.imgcontainer{
+    height: 60vh;
+    overflow: scroll;
+}
+div img{
+
+    width: 80%;
+    padding: 1rem;
+    border:solid black 1px;
+   
+
+}

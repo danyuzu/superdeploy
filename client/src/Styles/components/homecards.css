@@ -1,0 +1,80 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+            @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+           
+
+                                    .homecard-container{
+                                    
+                                                background-color: transparent;
+                                                position:relative;
+                                                margin-top: 5%;
+                                                align-items: center;
+                                                padding-top: 1rem;
+
+ 
+                         
+                                .card{
+                                    font-family: 'Lemon', serif;
+                                    outline: solid 5px rgb(158, 135, 135);
+                                    border-radius: 1rem;
+                                    background-color: rgb(230, 230, 229);
+                                    margin-top: 10px;
+                                margin-bottom: 10px;
+                                margin-right: 5px;
+                                align-items: center;
+                                 width:100%;
+                                }
+                                .enlace{
+                            text-decoration: none;
+                            color:black;
+                                }
+
+                                .card:hover{
+                                  background: rgba(15, 24, 40, 0.5);
+
+                                }
+                                 
+                                .contratar
+                                {
+                                  border-radius: 1rem;
+                                  position: relative;
+                                  bottom:1rem;
+                                  width: 80%;
+                                  padding: 5px;
+                                  border:solid 2px black;
+
+                                }  
+
+                                .contratar:hover{
+                                  color:black;
+                                  background-color:white;
+                                  border:black 8px;
+                                }
+                                
+                                
+                                .type{
+                                   
+                                     text-align: center;
+                                    border:solid black 2px;
+                                    background-color: black;
+                                    border-radius: 5px;
+                                    margin-top:1rem;
+                                    color: white;
+                                    letter-spacing: 2px;
+                                }
+                                
+                               .price{
+                                 border: solid 2px black;
+                                 border-left: 1rem;
+                                 text-align:  center;
+                                 background-color: black;
+                                 color:green; 
+                                 border-radius: 1rem;
+
+                                }                            
+
+
+
+
+
+                            
+                            }

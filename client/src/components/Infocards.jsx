@@ -1,6 +1,7 @@
 
 
 import React from "react";
+import '../Styles/components/infocards.css'
 
 const  Infocards =()=>{
 

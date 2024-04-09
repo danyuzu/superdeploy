@@ -4,9 +4,9 @@ import Homecards from './Homecards';
 import video from '/src/assets/IMG_2450.mp4'
 import Footer from './Footer';
 import Infocards from './Infocards';
+import '..//Styles/components/home.css'
+
 const  Home =()=>{
-
-
 
   return (
       <div className="home_container">
@@ -16,12 +16,8 @@ const  Home =()=>{
 <video  src={video} type='video/mp4' playsInline  autoPlay loop muted className='backvideo'>
     </video> 
   <nav>
-
-
-            
-
-
-            {/* <img className="fondouno"alt='img' src={texturablanca}/> */}
+    
+    {/* <img className="fondouno"alt='img' src={texturablanca}/> */}
 <div className='wrapper'>
 <div className='static-txt'>Sitios web para: </div>
    <ul className='dynamic-txts'>

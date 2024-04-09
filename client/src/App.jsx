@@ -1,15 +1,14 @@
 import React,{ useState, createContext } from 'react'
-
 import viteLogo from '/vite.svg'
-
 import bar from './assets/bar.svg'
-import './Styles/styles.scss'
+import './Styles/components/app.css'
 import { Routes, Route, createBrowserRouter,
    createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Servicios from './components/Servicios'
 import Contrato from './components/Contrato'
+import Portafolio  from './components/Portafolio'
 
 export const priceContext =createContext();
 
@@ -27,7 +26,9 @@ function App({routes}) {
 
 <Route index path='/' element={<Home/>}/>
 <Route path='/servicios' element={<Servicios/>}/>
-<Route path='/contrato' element={<Contrato/>}/>
+<Route path='/contrato/:id' element={<Contrato/>}/>
+<Route path='/port' element={<Portafolio/>}/>
+
 
 
 </Routes>

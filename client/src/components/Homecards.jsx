@@ -2,122 +2,68 @@
 
 import React,{useContext, useState} from 'react';
 import PayPal from './PayPal';
-//import "../node_modules/bootstrap/scss/bootstrap";
+//import '"../node_modules/bootstrap/scss/bootstrap";'
 import { priceContext } from '../App';
+import '../Styles/components/homecards.css'
+import {items} from './Alldata'
+import { Link } from 'react-router-dom';
+
 
 const Homecards =()=>
 {
 
-  const [checkout, setcheckout] = useState(false);
 
+  const [checkout, setcheckout] = useState(false);
+const filtereditems = items.filter(item => item.id <= 3)
 const {price, setprice} = useContext(priceContext);
-    return(<div className='homecard-container px-3'> 
+    return(<div className='homecard-container px-4'> 
 
 
 <div className='row'>
-        <div className="col">
-          <div className='card'>    
-              <p className='type'>Prime</p>
-                       
-              <p className='price'>$13,999 mx</p>         
+
+  {
+    filtereditems.map((item)=>(
+
+      <div className="col">
+      <div className='card'>    
+          <p className='type'>{item.type}</p>
                    
-    
-              <div className='caracteristics'> 
-              
-              <ul>
-                <li>✅ Secciones: 3</li>
-                <li>✅ Revisiones y Cambios:3</li>
-                <li>✅ Correos Corporativos: 5</li>
-                <li>✅ Cupon en publicidad digital: 15% OFF</li>
-                <li>✅ Chat, Formuslarios y Maps</li>
-                <li>✅ Certificado SSL</li>
-                <li>✅ Aceleracion y Responsiva</li>
-                <li>✅ Manual de Uso</li>
-                <li>✅ Hosting: 3 meses</li>
-                <li>🆇 SEO On page</li>
-                <li>🆇 Dominio</li>
-                <li>✅ Tiempo de entrega: 3 a 4 semanas</li>
-    
-    
-    
-    
-              </ul>
-              </div>
+          <p className='price'>${item.price}</p>         
+               
 
-        {checkout ?  (  <PayPal/>
-      ) : (  <button className='contratar' onClick={() => {setcheckout(true), setprice(13999.00)}}> 
-     CONTRATAR</button>)}
+          <div className='caracteristics'> 
           
-              </div>
-        </div>
-        <div className="col">
-          <div className='card'>    
-              <p className='type'>Elite</p> 
+          <ul>
+            <li>✅ Secciones: {item.secciones}</li>
+            <li>✅ Revisiones y Cambios:{item.revisiones}</li>
+            <li>✅ Chat, Formuslarios y Maps</li>
+            <li>✅ Certificado SSL</li>
+            <li>✅ Aceleracion y Responsiva</li>
+            <li>✅ Manual de Uso</li>
+            <li>✅ Hosting: {item.hosting}</li>
+            <li>🆇 SEO On page</li>
+            <li>🆇 Dominio</li>
+            <li>✅ Tiempo de entrega: 3 a 4 semanas</li>
 
-              <p className='price'>$19,999 mx</p>         
 
-    
-              <div className='caracteristics'> 
-              
-              <ul>
-                <li>✅ Secciones: 5</li>
-                <li>✅ Revisiones y Cambios: 4</li>
-                <li>✅ Chat, Formuslarios y Maps</li>
-                <li>✅ Certificado SSL</li>
-                <li>✅ Correos Corporativos: 10</li>
-                <li>✅ Cupon en publicidad digital: 10% OFF</li>
-                <li>✅ Aceleracion y Responsiva</li>
-                <li>✅ Manual de Uso</li>
-                <li>✅ Hosting: 6 meses</li>
-                <li>🆇 SEO On page</li>
-                <li>🆇 Dominio</li>
-                <li>✅ Tiempo de entrega: 3 a 4 semanas</li>
-    
-    
-    
-    
-              </ul>
-              </div>
-              {checkout ?  (  <PayPal/>
-      ) : (  <button className='contratar' onClick={() => {setcheckout(true), setprice(19999.00)}}> 
-      CONTRATAR</button>)}
-          
-              </div>
-        </div>
-        <div className="col">
-          <div className='card'>    
-              <p className='type'>Gold</p>         
-              <p className='price'>$24,999 mx</p>         
-                   
-    
-              <div className='caracteristics'> 
-              
-              <ul>
-                <li>✅ Secciones: 10</li>
-                <li>✅ Revisiones y Cambios:5</li>
-                <li>✅ Chat, Formuslarios y Maps</li>
-                <li>✅ Certificado SSL</li>
-                <li>✅ Correos corporativos</li>
-                <li>✅ Cupon en publicidad digital: 15% OFF</li>
-                <li>✅ Aceleracion y Responsiva</li>
-                <li>✅ Manual de Uso</li>
-                <li>✅ Hosting: 9 meses</li>
-                <li>🆇 SEO On page</li>
-                <li>🆇 Dominio</li>
-                <li>✅ Tiempo de entrega: 3 a 4 semanas</li>
-    
-    
-    
-    
-              </ul>
-              </div>
-              {checkout ?  (  <PayPal/>
-      ) : (  <button className='contratar' onClick={() =>{setcheckout(true), setprice(24999.00)}}> 
-      CONTRATAR</button>)}
-          
-              </div>
-        </div>
-     
+
+
+          </ul>
+          </div>
+
+    {/* {checkout ?  (  <PayPal/>
+  ) : (  <button className='contratar' onClick={() => {setcheckout(true), setprice(13999.00)}}> 
+ CONTRATAR</button>)} */}
+
+<button className='contratar' onClick={() =>{} }> 
+<Link className='enlace' to={`/contrato/${item.id}`}> CONTRATAR</Link>
+</button>
+      
+          </div>
+    </div>
+     ) )
+  }
+       
         </div>
         </div>)
     
