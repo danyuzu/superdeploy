@@ -30,10 +30,8 @@ margin-top: 5px;
 
 }
 
-.navtoggle-flip{
-  display:none;
-visibility: hidden;
-color:transparent;
+.navtoggle{
+  display: none;
 }
 
 
@@ -74,7 +72,7 @@ font-family: 'Roboto', sans-serif;
 @media(max-width: 950px) 
 {
 
- .navtoggle{
+ /* .navtoggle{
      display: block;
      color: black;
      position: relative;
@@ -82,9 +80,9 @@ font-family: 'Roboto', sans-serif;
      transition: .5s ease-out;
      font-size: 2rem;
      cursor: pointer;
- }
+ } */
 
- .navtoggle-flip{
+ /* .navtoggle-flip{
   display: block;
  color: black;
  position: relative;
@@ -93,7 +91,7 @@ transform: rotate(90deg);
 transition: .5s ease-in-out;
 font-size: 1.7rem;
 cursor: pointer 
-}
+} */
 
  .navlinks {
   display: flex;
